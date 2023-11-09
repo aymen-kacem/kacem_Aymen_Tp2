@@ -11,7 +11,7 @@
         import android.widget.RadioButton;
         import android.widget.SeekBar;
         import android.widget.TextView;
-        import android.widget.
+        import android.widget;
 public class MainActivity extends AppCompatActivity {
     private EditText etValeur;
     private TextView tvAge, tvReponse;
@@ -23,13 +23,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         init();
-        sbAge.setOnSeekBarChangeListener(new
-                                                 SeekBar.OnSeekBarChangeListener() {
-                                                     @Override
-                                                     public void onProgressChanged(SeekBar seekBar, int progress,
-                                                                                   boolean fromUser) {
-                                                         Log.i("Information", "onProgressChanged "+progress);
-                                                         tvAge.setText("Votre âge : "+ progress);
+        sbAge.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                Log.i("Information", "onProgressChanged "+progress);
+                tvAge.setText("Votre âge : "+ progress);
                                                      }
                                                      @Override
                                                      public void onStartTrackingTouch(SeekBar seekBar){}
@@ -57,8 +55,7 @@ public class MainActivity extends AppCompatActivity {
         if(!etValeur.getText().toString().isEmpty())
             verifValeur = true;
         else
-            Toast.makeText(MainActivity.this, "Veuillez saisir votre valeur
-                    mesurée !", Toast.LENGTH_LONG).show();
+            Toast.makeText(MainActivity.this, "Veuillez saisir votre valeur mesurée !", Toast.LENGTH_LONG).show();
         if(verifAge && verifValeur)
         {
             age = sbAge.getProgress();
@@ -98,11 +95,11 @@ public class MainActivity extends AppCompatActivity {
     private void init()
     {
         sbAge = findViewById(R.id.sbAge);
-        tvAge = findViewById(R.id.tvAge);
-        etValeur = findViewById(R.id.etValeur);
+        tvAge = findViewById(R.id.votreAge);
+        etValeur = findViewById(R.id.vm);
         rbIsFasting = findViewById(R.id.rbtOui);
         rbIsNotFasting = findViewById(R.id.rbtNon);
-        btnConsulter = findViewById(R.id.btnConsulter);
-        tvReponse = findViewById(R.id.tvReponse);
+        btnConsulter = findViewById(R.id.btn);
+        tvReponse = findViewById(R.id.res);
     }
 }
