@@ -33,13 +33,13 @@
         android:textSize="25sp"
         android:textStyle="normal"
         />
+
     <SeekBar
+        android:id="@+id/sbAge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:max="120"
-        android:id="@+id/sbAge"
         android:layout_marginTop="20dp"
-        />
+        android:max="120" />
 
     <View
         android:layout_marginTop="30dp"
@@ -99,19 +99,19 @@
         android:layout_height="75dp"
         android:layout_marginTop="50dp"
         android:text="CONSULTER"
-        android:textSize="25sp"
+        android:textSize="18sp"
         android:padding="15dp"
         />
     <TextView
         android:id="@+id/res"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="380dp"
+        android:layout_height="50dp"
         android:text="..."
         android:textStyle="bold"
         android:textSize="25sp"
         android:layout_marginTop="50dp"
         android:gravity="center"
-        android:textColor="@color/red"
+        android:textColor="@color/black"
         />
 
 
